@@ -1,11 +1,16 @@
 number = int(input("Input number : "))
 
-count = 0
-for i in range(1, number+1):
-    if number % i == 0:
-        count = count + 1
+if number < 2:
+    count = 1
+else:
+    count = 0
 
-if count == 2:
+    for i in range(2, number):
+        if number % i == 0:
+            count = count + 1
+
+if count == 0:
     print(f"{number} is prime number~")
 else:
     print(f"{number} is NOT prime number!")
+
