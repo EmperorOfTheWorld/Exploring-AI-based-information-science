@@ -5,12 +5,16 @@ is_prime_number = True
 if number < 2:
     is_prime_number = False
 else:
-    for i in range(2, number):
+    i = 2
+    while i*i < number:
         if number % i == 0:
             is_prime_number = False
             break
+        i = i + 1
+        print(i)
 
 if is_prime_number == True:
     print(f"{number} is prime number~")
 else:
     print(f"{number} is NOT prime number!")
+
