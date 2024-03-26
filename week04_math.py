@@ -13,6 +13,20 @@ def print_fx(fx):
         expo = expo - 1
     return texts
 
-coefficinet = [5, -2, 0, 6]
+def cal(fx, x):
+    expo = len(fx) - 1
+    tot = 0
 
-print(print_fx(coefficinet))
+    for i in range(len(fx)):
+        coef = fx[i]
+        tot = tot + coef * x ** expo
+        expo = expo - 1
+
+    return tot
+
+coefficient = [5, -2, 0, 6]
+
+print(print_fx(coefficient))
+
+x = int(input())
+print(cal(coefficient ,x))
