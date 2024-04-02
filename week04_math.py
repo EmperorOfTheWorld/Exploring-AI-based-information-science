@@ -9,7 +9,7 @@ def print_fx(fx):
             continue
         if ((coef >= 0)&(i!=0)):
             texts = texts + "+"
-        texts = texts + str(coef) + "x^" + str(expo) +" "
+        texts = texts + f"{coef}x^{expo} "
         expo = expo - 1
     return texts
 
