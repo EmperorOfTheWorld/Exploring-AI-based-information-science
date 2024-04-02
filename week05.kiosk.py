@@ -13,3 +13,5 @@ while True:
         print("You ordered Americano. The price is 1500 won")
     elif menu == 2:
         print("You ordered Latte. The price is 2500 won")
+    else:
+        print(f"Menu number {menu} you ordered does not exist. Please choose from the menu")
