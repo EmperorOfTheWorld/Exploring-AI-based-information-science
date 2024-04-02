@@ -6,8 +6,14 @@ prices = [1500, 2500, 2300]
 quantity = [0, 0, 0]
 total_price = 0
 
+menu_lists = ''
+for m in range(len(beverage)):
+    menu_lists = menu_lists + f"{m+1}) {beverage[m]} {prices[m]}won  "
+
+menu_lists = menu_lists + f"{len(beverage)+1}) End order : "
+
 while True:
-    menu = input("1) Americano 2) Latte 3) Iced tea 4) End order :")
+    menu = input(menu_lists)
     if menu == '4':
         print("Your order has been accepted.")
         break
@@ -26,10 +32,8 @@ while True:
     else:
         print(f"Menu number {menu} you ordered does not exist. Please choose from the menu")
 
-if quantity[0] != 0:
-    print(f"{beverage[0]}\n\t{prices[0]}\tx{quantity[0]}\t{prices[0] * quantity[0]}")
-if quantity[1] != 0:
-    print(f"{beverage[1]}\n\t{prices[1]}\tx{quantity[1]}\t{prices[1] * quantity[1]}")
-if quantity[2] != 0:
-    print(f"{beverage[2]}\n\t{prices[2]}\tx{quantity[2]}\t{prices[2] * quantity[2]}")
+for i in range(len(beverage)):
+    if quantity[i] != 0:
+        print(f"{beverage[i]}\n\t{prices[i]}\tx{quantity[i]}\t{prices[i] * quantity[i]}")
+
 print(f"Tht total amount is {total_price} won.")
